@@ -4,7 +4,7 @@
 
 
 // value settings
-$font_color: #191919;
+$font_color: #5c5c5c;//by jeffrey after tib
 $bg1: #fff;
 $primary: #307099;//BY JEFFREY
 
@@ -12,7 +12,7 @@ $primary: #307099;//BY JEFFREY
 // related colors
 $font_color2: lighten($font_color, 45%);
 $bg2: darken($bg1, 3.6%);
-$line_color: lighten($font_color, 80%);
+$line_color: lighten($font_color, 45%);// by jeffrey
 $line_color2: lighten($font_color, 82%);
 
 // fixed colors
@@ -218,7 +218,8 @@ input, textarea, button {
         a {
             @include aColor($primary);
             &:hover{
-                border-bottom: 1px solid $primary;
+                border-bottom: 1px dashed $primary;
+				padding-bottom: 3px; //by jeffrey
             }
         }
         h1, h2, h3, h4, h5, h6 {
@@ -351,6 +352,7 @@ input, textarea, button {
 			padding: 0 0 1em;
 			border-bottom: 1px solid $line_color;
 			font-size: 2em;
+			color:#000;//by jeffrey
 		}
     }
 
@@ -418,12 +420,12 @@ input, textarea, button {
             font-size: 1.875em;
             font-weight: normal;
             margin: 0 0 1em;
-			padding: 0 0 1em;
-            border-bottom: 1px solid $line_color;
+			padding: 0 0 0em;//by jeffrey
+            //border-bottom: 1px solid $line_color;
 
             a{
-                color: darken($font_color, 10%);
-
+                //color: darken($font_color, 10%);
+				color:#000;//by jeffrey
                 &:hover{
                     color: $primary;
                     border-bottom: none;
@@ -782,7 +784,7 @@ input, textarea, button {
     //padding: 1.875em 0;
     padding: 2.7em 0;
     margin: 1.5em auto;//by jeffrey. original second is 4%
-	max-width:700px;//by jeffrey
+	max-width:600px;//by jeffrey
 	
 }
 
