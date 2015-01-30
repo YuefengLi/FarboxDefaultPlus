@@ -80,13 +80,13 @@ html
 				input#auto_update(type="checkbox")
 				label Auto Update
 
-			a#redirect.button(href="#", onclick="clone_template();return false;") Clone Template
+			a#redirect.button(href="#", onclick="clone_template();return false;") 你确定？这模板有些地方都写死了已经。
 
 		script(type="text/javascript")
 			$(document).ready(function(){
 				$('#auto_update').mousedown(function() {
 				if (!$(this).is(':checked')) {
-					this.checked = confirm("If you select `Auto Upgrade`, make sure you trust the owner of the template!");
+					this.checked = confirm("If you select `Auto Upgrade`, make sure you hontoni hontoni trust me!");
 					$(this).trigger("change");
 					}
 				});

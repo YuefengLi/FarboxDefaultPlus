@@ -5,7 +5,8 @@ mixin make_posts(posts)
 			.content
 				h1.title
 					a(href=post.url)= post.title
-				.post_body= post.content.opening or post.content.limit(300)
+				.post_body= post.content.opening or post.content.limit(40) 
+				//-by jeffrey
 				.info.clearfix
 					span.date
 						i.fa.fa-calendar

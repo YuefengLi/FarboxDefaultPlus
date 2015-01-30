@@ -1,11 +1,12 @@
 html
-	+i18n('Home', '首页', 'zh_cn')
-	+i18n('Albums', '相册', 'zh_cn')
-	+i18n('Categories', '分类', 'zh_cn')
-	+i18n('Archive', '归档', 'zh_cn')
-	+i18n('Tags', '标签', 'zh_cn')
-	+i18n('About', '关于', 'zh_cn')
-	+i18n('Links', '友链', 'zh_cn')
+	+i18n('Home', '首页', 'zh_cnn') 
+	//-by jeffrey compulsory english
+	+i18n('Albums', '相册', 'zh_cnn')
+	+i18n('CATEGORIES', '分类', 'zh_cnn')
+	+i18n('ARCHIVE', '归档', 'zh_cnn')
+	+i18n('Tags', '标签', 'zh_cnn')
+	+i18n('About', '关于', 'zh_cnn')
+	+i18n('Links', '友链', 'zh_cnn')
 	head
 		+mobile_meta()
 		meta(name="keywords", content=site.configs.keywords.escaped)
@@ -19,14 +20,20 @@ html
 			if site.configs.cover and has(site.configs.cover)
 				site_cover = site.configs.cover
 			else
-				site_cover = '/farbox_free_image.jpg'
-			site_cover = site_cover + '?height=428&width=1280&fixed=true'
-			#header.header(style="background-image: url({{site_cover}})")
+				//-site_cover = '/farbox_free_image.jpg' removed by jeffrey
+			//-site_cover = site_cover + '?height=428&width=1280&fixed=true'
+			#header.header 
+				//-(style="background-image: url({{site_cover}})")
 				.header_wrapper
 					h1.title
-						a(href='/')= site.title
+						a(href='/')越
+							span(style="color:yellow;font-size:smaller") 锋利
 					ul.nav
-						li
+						pages = get_data(status='pages', type='post', limit=5, with_page=False, sort='position')
+						for page_p in pages
+							li
+								a.navpage(href="/{{page_p.path}}")= _(page_p.filename.split('.')[0].title())
+						//-li
 							a(href="/")= _('Home')
 						if has('images')
 							li
@@ -35,27 +42,28 @@ html
 								+redirect('/album')
 						if has('categories')
 							li
-								a(href='/categories')= _('Categories')
+								a(href='/categories')= _('CATEGORIES')
 						if has('posts')
 							li
-								a(href='/archive')= _('Archive')
-						if site.tags
+								a(href='/archive')= _('ARCHIVE')
+						//-if site.tags
 							li
 								a(href='/tags')= _('Tags')
-						pages = get_data(status='pages', type='post', limit=5, with_page=False, sort='position')
-						for page_p in pages
-							li
-								a(href="/{{page_p.path}}")= _(page_p.filename.split('.')[0].title())
-						li
+						
+						//-li
 							a(href="/feed") RSS
 			#main
 				block content
+				p.back
+					small back to//by jeffrey back to top
+					a(href="#header") &nbsp;TOP
 			#footer
 				.powered_by
-					a(href="https://www.farbox.com", target="_blank") Powered By FarBox.com
-					a(href="http://colachan.com", target="_blank") Designer ColaChan
-					a.admin(href="/admin") Admin
-					span ©2012-2015 Z.R.E.Y Inc.
+					|© 2013 - 2015<a href="http://yuefeng.li">Yuefeng Li</a>     
+					|Powered by<a href="https://www.farbox.com", target="_blank">FarBox</a>
+					|Designed by<a href="http://colachan.com", target="_blank">ColaChan</a>
+					//-a.admin(href="/admin") Admin
+					//-span All Rights reserved.
 
 			+load('jquery')
 			+load('script.coffee')
