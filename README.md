@@ -1,11 +1,13 @@
-# FarboxDefaultPlus
+﻿# FarboxDefaultPlus
 A modified farbox theme based on Farbox Default.
 
 这是一个 [FarBox](http://www.farbox.com) 主题，基于 Farbox 的[默认主题](https://github.com/BuildFarBox/default-template)修改而来，提交仓库的时候随便就取了个 FarboxDefaultPlus 的名字，并不是改进版的意思啦。
 
 效果可以参考我的个人站点 [yuefeng.li](http://yuefeng.li)。
 
-基本上是一个自用的模板，很多地方，比如 site.title 就已经写死了，当然要改的话也很容易就是了。如果有需要的话尽管可以拿去用，留着 footer 就行。当然，也要感谢模板的原作者[可乐橙](http://colachan.com/)。
+基本上是一个自用的模板，有些地方，比如 site.title 已经写死了。
+
+特别的，要感谢原模板的作者[可乐橙](http://colachan.com/)。
 
 #Release Notes
 ##Version 1

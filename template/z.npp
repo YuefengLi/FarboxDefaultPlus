@@ -1,11 +1,6 @@
 <NotepadPlus>
     <Session activeView="0">
-        <mainView activeIndex="0">
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="861" startPos="1565" endPos="1565" selMode="0" lang="Python" encoding="-1" filename="E:\YFLee\Dropbox\Apps\FarBox\yflee.info\template\base.jade" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="861" startPos="492" endPos="492" selMode="0" lang="Python" encoding="-1" filename="E:\YFLee\Dropbox\Apps\FarBox\yflee.info\template\index+category+tag.jade" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="861" startPos="237" endPos="237" selMode="0" lang="Python" encoding="-1" filename="E:\YFLee\Dropbox\Apps\FarBox\yflee.info\template\post.jade" />
-            <File firstVisibleLine="3" xOffset="0" scrollWidth="861" startPos="263" endPos="263" selMode="0" lang="CSS" encoding="-1" filename="E:\YFLee\Dropbox\Apps\FarBox\yflee.info\template\blog\style.scss" />
-        </mainView>
+        <mainView activeIndex="0" />
         <subView activeIndex="0" />
     </Session>
 </NotepadPlus>

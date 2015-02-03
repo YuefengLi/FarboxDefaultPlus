@@ -9,7 +9,8 @@
 				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 			})();
 	elif site.configs.duoshuo
-		.ds-thread
+		<div class="ds-thread" data-title="{{ post.title }}" data-url="{{ post.url }}"></div>
+		//by jeffrey for new duoshhuo
 		script(type="text/javascript")
 			var duoshuoQuery = {short_name:"{{ site.configs.duoshuo }}"};
 			(function() { var ds = document.createElement('script'); ds.type = 'text/javascript';ds.async = true;
